@@ -38,7 +38,7 @@ function Main() {
   return (
     <div>
       <div className=''>
-        <div className='m-2 text-4xl font-bold text-center text-cyan-200'>
+        <div className='p-3 m-4 text-4xl font-bold text-center text-stone-50'>
             <h2>Currency Converter</h2>
         </div>
         <form onSubmit={(e) => {
