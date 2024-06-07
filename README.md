@@ -1,8 +1,10 @@
-# React + Vite
+In this project i have use custome hook using useEffect hook and made a function to call an api 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+basically i have made a currency conveter which convert and country currency to any country currency
+and added a swap function which which swaps all currency 
 
-Currently, two official plugins are available:
+then written nessary logic 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+added tailwind css to enhance the ui ux 
+
+and well done shifa you did a grate job!!!
