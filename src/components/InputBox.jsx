@@ -14,8 +14,9 @@ function InputBox({
   const amountInputId = useId();
 
   return (
-    <div className='p-4 text-sm rounded-md bg-sky-700'>
-      <div className='w-full'>
+    <div className="p-4 text-white rounded-lg bg-white/30">
+    <div className="font-semibol ">
+      <div className=''>
         <label htmlFor={amountInputId} className="block mb-2">{label}</label>
         <input
           className="outline-none w-full bg-transparent py-1.5 mb-2"
@@ -36,10 +37,13 @@ function InputBox({
           className="outline-none bg-transparent py-1.5"
         >
           {currencyOption.map((currency) => (
-            <option key={currency} value={currency}>{currency}</option>
+            <option key={currency} value={currency}
+            className="p-3"
+            >{currency}</option>
           ))}
         </select>
       </div>
+    </div>
     </div>
   );
 }
