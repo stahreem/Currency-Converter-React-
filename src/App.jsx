@@ -10,7 +10,7 @@ function App() {
 
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo || {});
-
+  
   if (!currencyInfo || !options.length) {
     return <div>Loading...</div>;
   }
@@ -24,8 +24,12 @@ function App() {
   };
 
   const convert = () => {
-  const result=   setConvertedAmount(amount * currencyInfo[to]);
-    console.log(result);
+    const conversionRate = currencyInfo[to];
+    if (conversionRate) {
+      setConvertedAmount(amount * conversionRate);
+    } else {
+      setConvertedAmount(0);
+    }
   };
 
   return (
@@ -37,14 +41,14 @@ function App() {
         }}>
           <div>
             <InputBox
-              label= {from}
+              label={`From (${from.toUpperCase()})`}
               amount={amount}
               currencyOption={options}
               onCurrencyChange={setFrom}
-              selectCurrency= {from}
+              selectCurrency={from}
               onAmountChange={setAmount}
-              amountDisable = {false}
-              currencyDisable = {false}
+              amountDisable={false}
+              currencyDisable={false}
             />
           </div>
           <div>
@@ -52,19 +56,13 @@ function App() {
           </div>
           <div>
             <InputBox
-              label= {to}
+              label={`To (${to.toUpperCase()})`}
               amount={convertedAmount}
               currencyOption={options}
               onCurrencyChange={setTo}
               selectCurrency={to}
-              amountDisable = {false}
-              currencyDisable = {false}
-
-              onAmountChange = {setTo}
-             
-             
-            
-             
+              amountDisable={true}
+              currencyDisable={false}
             />
           </div>
           <div>
