@@ -19,7 +19,7 @@ function InputBox({
       <div className=''>
         <label htmlFor={amountInputId} className="block mb-2">{label}</label>
         <input
-          className="outline-none w-full bg-slate-900 rounded-xl px-2 bg-transparent py-1.5 mb-2"
+          className="outline-none w-full bg-slate-900 rounded-xl px-2  py-1.5 mb-2"
           id={amountInputId}
           type='number'
           placeholder='Amount'
@@ -34,7 +34,7 @@ function InputBox({
           value={selectCurrency}
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
           disabled={currencyDisable}
-          className="outline-none w-full bg-slate-900 rounded-xl px-2 bg-transparent py-1.5 mb-2"
+          className="outline-none w-full bg-slate-900 rounded-xl px-2 b py-1.5 mb-2"
           // className="outline-none bg-white text-black py-1.5 rounded-lg"
         >
           {currencyOption.map((currency) => (

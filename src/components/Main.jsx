@@ -58,7 +58,7 @@ function Main() {
             />
           </div>
           <div>
-          <div className='p-1 m-2 font-semibold bg-transparent rounded-lg bg-slate-700'>
+          <div className='p-1 m-2 font-semibold rounded-lg bg-slate-700'>
             <button type="button" onClick={swap}>Swap</button>
           </div>
           </div>
@@ -73,7 +73,7 @@ function Main() {
               currencyDisable={false}
             />
           </div>
-          <div className='p-1 m-2 font-semibold bg-transparent rounded-lg bg-slate-700'>
+          <div className='p-1 m-2 font-semibold rounded-lg bg-slate-700'>
             <button type="submit">Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
           </div>
         </form>
