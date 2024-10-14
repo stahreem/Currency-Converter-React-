@@ -5,10 +5,10 @@ import useCurrencyInfo from '../hooks/useCurrencyInfo';
 
 
 function Main() {
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState();
     const [from, setFrom] = useState("usd");
     const [to, setTo] = useState("inr");
-    const [convertedAmount, setConvertedAmount] = useState(0);
+    const [convertedAmount, setConvertedAmount] = useState();
   
     const currencyInfo = useCurrencyInfo(from);
     const options = Object.keys(currencyInfo || {});
@@ -58,7 +58,7 @@ function Main() {
             />
           </div>
           <div>
-          <div className='p-1 m-2 font-semibold rounded-lg bg-slate-700'>
+          <div className='p-1 m-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer bg-slate-700 hover:bg-slate-800'>
             <button type="button" onClick={swap}>Swap</button>
           </div>
           </div>
@@ -73,7 +73,7 @@ function Main() {
               currencyDisable={false}
             />
           </div>
-          <div className='p-1 m-2 font-semibold rounded-lg bg-slate-700'>
+          <div className='p-1 m-2 font-semibold transition duration-300 ease-in-out rounded-lg cursor-pointer bg-slate-700 hover:bg-slate-800'>
             <button type="submit">Convert {from.toUpperCase()} to {to.toUpperCase()}</button>
           </div>
         </form>
