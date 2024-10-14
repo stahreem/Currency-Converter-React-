@@ -17,3 +17,5 @@ I utilized an API to fetch the latest conversion rates. The custom hook ensures 
 🎨 UI/UX with Tailwind CSS:
 
 Tailwind CSS was used to design a clean and responsive interface, enhancing the user experience. Transitions, hover effects, and modern UI features were integrated for seamless interaction.
+
+![alt text](image.png)
